@@ -1,4 +1,4 @@
-mi030
+MI030
 =====
 
 Analyse des programmes et sémantique 
