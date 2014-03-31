@@ -87,3 +87,31 @@ En sémantique dénotationnelle (SD), il faut définir trois notions :
 - La syntaxe sémantique : exprimer les domaines sémantiques et les opérations associées qui sont la dénotation de la syntaxe.
 - Ecrire des equations qui font la connexion entre les syntaxes précédentes.
 
+Commentaires pas à pas de la SD
+---------
+
+#### Les domaines sémantiques
+
+Les *left values* $LV$ représentent les adresses.
+Les *right values* $RV$ représentent les booléans, les valeurs dans $\Z$ et les identifiants d'objets.
+
+Les *denotable values* $DV$ représentent les $LV$, les class, les identifiants d'objets et les $U$
+Toutes les choses que l'on peut dénoter sont dans $DV$ cest à dire que ce ne sont pas des objets contenant des *datas* mais une représentation de ces derniers.
+Un *oid* est un bien un id qui represente un objet *data* ... Idem pour tous les ensembles de *DV*
+
+Les *storable values* contiennent l'ensemble des objets *storable* c'est à dire les $RV$, les object et les $UU$
+
+#### Fonctions sémantiques
+
+Un environnement est une fonction :  $ide \to DV$
+Dans la fonction *emptyEnv*, on renvoie donc un $DV$ de manière à recuperer la valeur *unbound* qui est dans l'ensemble $U$ de $DV$ en position 4.
+On a donc, $inDV_{4}(unbound)$
+
+Dans la fonction *allocate*, $l$ est un entier qui représente une adresse mémoire.
+Pour typer un retour, on spécifie une *condition inX* sur le retour
+**Exemple** : $(((updateStore \sigma) l) inSV_{3}(undefined))$
+Pour typer une entrée, on spécifie une *condition where* sur l'entrée
+**Exemple** : $where l € Loc | isUU(\sigma l) \land outUU(\sigma l) = unused$
+
+
+
