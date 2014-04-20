@@ -103,9 +103,15 @@ Les *storable values* contiennent l'ensemble des objets *storable* c'est à dire
 
 #### Fonctions sémantiques
 
+###### Environnement
+
 Un environnement est une fonction :  $ide \to DV$
-Dans la fonction *emptyEnv*, on renvoie donc un $DV$ de manière à recuperer la valeur *unbound* qui est dans l'ensemble $U$ de $DV$ en position 4.
+Dans la fonction *emptyEnv*, on renvoie un environemment vide qui est représenté par *unbound*. Mais *unbound* n'est pas un $DV$, on le tranforme en $DV$ par les fonctions d'injections.
 On a donc, $inDV_{4}(unbound)$
+
+Dans la fonction *extendEnv*, $ide_{1}$ correspond à l'environnement de sortie. 
+Explication du if : Si l'environnement d'entrée et de sortie sont les mêmes alors l'$Ide$ qu'on voulait rajouter est déjà présent dans l'environnement d'entrée. On renvoie donc $dv$
+Explication du else : Sinon on rajoute l'$Ide$ dans l'environnement.
 
 Dans la fonction *allocate*, $l$ est un entier qui représente une adresse mémoire.
 Pour typer un retour, on spécifie une *condition inX* sur le retour
