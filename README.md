@@ -1,4 +1,4 @@
-MI030
+UPMC University - MI030 (Analyse de programmes et sémantiques)
 =====
 
-Analyse des programmes et sémantique 
+Program analysis and semantic
