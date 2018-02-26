@@ -1,4 +1,4 @@
 UPMC University - MI030 (Analyse de programmes et sémantiques)
 =====
 
-Program analysis and semantic
+Course summary about Program analysis and semantic at Pierre-et-Marie-Curie University
